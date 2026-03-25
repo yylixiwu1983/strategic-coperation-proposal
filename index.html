@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战略合作企划书</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        /* 封面 */
+        .cover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+        
+        .cover h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .cover .subtitle {
+            font-size: 24px;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cover .companies {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .company-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .company-box h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        
+        .company-box p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .cooperation-icon {
+            font-size: 40px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        /* 内容区域 */
+        .content {
+            padding: 60px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #667eea;
+            display: inline-block;
+        }
+        
+        .section-subtitle {
+            font-size: 24px;
+            color: #555;
+            margin: 30px 0 20px 0;
+            padding-left: 15px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        /* 精美表格样式 */
+        .table-container {
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        th {
+            padding: 18px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9ff;
+            transition: background 0.3s;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* 交替行颜色 */
+        tbody tr:nth-child(even) {
+            background: #fafbfc;
+        }
+        
+        /* 特殊单元格 */
+        .highlight-cell {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .tag-blue {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .tag-green {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .tag-orange {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .tag-purple {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        /* 架构图样式 */
+        .architecture-diagram {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .diagram-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .diagram-layer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+        
+        .diagram-box {
+            padding: 20px 30px;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .diagram-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .diagram-box h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .diagram-box p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        /* 颜色方案 */
+        .box-solar { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); color: #333; }
+        .box-wind { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; }
+        .box-storage { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .box-microgrid { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; min-width: 250px; }
+        .box-building { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #333; }
+        .box-charging { background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); color: #333; }
+        .box-battery { background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); color: #333; }
+        .box-ems { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; min-width: 80%; }
+        
+        .arrow-down {
+            text-align: center;
+            font-size: 30px;
+            color: #666;
+            margin: 10px 0;
+        }
+        
+        .layer-label {
+            text-align: center;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* 信息卡片 */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .info-card h4 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .info-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        /* 数据展示 */
+        .data-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .data-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .data-item .number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .data-item .label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 流程图 */
+        .flow-chart {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .flow-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .flow-content {
+            flex: 1;
+            background: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .flow-content h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .flow-content p {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        /* 页脚 */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 60px;
+            text-align: center;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* 打印样式优化 */
+        @media print {
+            @page {
+                size: A4;
+                margin: 15mm 12mm;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            body { 
+                background: white !important;
+                padding: 0 !important;
+            }
+            
+            .container { 
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                max-width: 100% !important;
+            }
+            
+            .cover { 
+                page-break-after: always;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            table, .info-card, .scenario-card, .cable-module, .vpp-layer, .architecture-diagram {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .diagram-box, .vpp-box, .sgl-box {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+        
+        /* ===== 技术图表样式 ===== */
+        /* 虚拟电厂架构 */
+        .vpp-architecture {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            border-radius: 15px;
+            padding: 10px;
+        }
+        
+        .vpp-layer {
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .vpp-layer-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .vpp-resources {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .vpp-box {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            background: white;
+        }
+        
+        .vpp-box h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .vpp-box p {
+            font-size: 12px;
+            opacity: 0.8;
+            color: #666;
+        }
+        
+        .resource-layer { background: #e3f2fd; }
+        .aggregation-layer { background: #fff3e0; }
+        .platform-layer { background: #f3e5f5; }
+        .market-layer { background: #e8f5e9; }
+        
+        .arrow-connector {
+            text-align: center;
+            font-size: 24px;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        
+        /* 电缆监测系统 */
+        .cable-system {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .cable-module {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .cable-module h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .cable-module ul {
+            list-style: none;
+            text-align: left;
+            font-size: 13px;
+        }
+        
+        .cable-module li {
+            padding: 5px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .cable-module li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+        }
+        
+        .cable-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .cable-step {
+            background: white;
+            border: 3px solid #667eea;
+            color: #667eea;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .cable-arrow {
+            font-size: 30px;
+            color: #667eea;
+        }
+        
+        /* 移动储能 */
+        .energy-storage {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .storage-specs {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+        .storage-specs h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+        
+        .storage-scenarios {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .scenario-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .scenario-card h5 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .scenario-card p {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        /* 源网荷储 */
+        .source-grid-load {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .sgl-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .sgl-box {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .sgl-box h4 {
+            font-size: 16px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .sgl-box ul {
+            list-style: none;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .sgl-box li {
+            padding: 3px 0;
+        }
+        
+        .sgl-connector {
+            font-size: 30px;
+            color: #667eea;
+        }
+        
+        .control-center {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        
+        .control-center h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        /* EMS架构 */
+        .ems-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .ems-layer {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .ems-layer-label {
+            width: 100px;
+            font-weight: bold;
+            color: #666;
+            font-size: 14px;
+            text-align: right;
+        }
+        
+        .ems-layer-content {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        
+        .ems-arrow {
+            text-align: center;
+            color: #667eea;
+            font-size: 20px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .cable-system { grid-template-columns: repeat(2, 1fr); }
+            .energy-storage { grid-template-columns: 1fr; }
+            .vpp-resources { flex-direction: column; }
+            .sgl-row { flex-direction: column; }
+            .ems-layer { flex-direction: column; align-items: flex-start; }
+            .ems-layer-label { text-align: left; width: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 封面 -->
+        <div class="cover">
+            <h1>战略合作企划书</h1>
+            <p class="subtitle">五大核心领域全面合作</p>
+            
+            <div class="companies">
+                <div class="company-box">
+                    <h3>林同棪国际</h3>
+                    <p>TYLin International</p>
+                    <p>工程设计甲级 | 市政基础设施</p>
+                </div>
+                
+                <div class="cooperation-icon">🤝</div>
+                
+                <div class="company-box">
+                    <h3>重庆华网</h3>
+                    <p>电力设计有限公司</p>
+                    <p>新能源/电力乙级 | 综合能源</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 内容 -->
+        <div class="content">
+            <!-- 优势互补 -->
+            <div class="section">
+                <h2 class="section-title">双方优势互补</h2>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>维度</th>
+                                <th>林同棪国际</th>
+                                <th>重庆华网</th>
+                                <th>协同价值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="tag tag-blue">核心资质</span></td>
+                                <td>工程设计甲级<br>（桥梁、市政）</td>
+                                <td>新能源/电力乙级设计</td>
+                                <td>资质互补，承接综合项目</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tag tag-green">专业领域</span></td>
+                                <td>交通基础设施、桥梁<br>市政公用设施、园区</td>
+                                <td>光伏、风电、储能<br>电力工程、虚拟电厂</td>
+                                <td>技术融合，提供整体方案</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tag tag-orange">市场布局</span></td>
+                                <td>全国8+分支机构:<br>北京、上海、广州、沈阳<br>南宁、成都、武汉、昆明<br>海外机构:<br>新加坡、北美</td>
+                                <td>重庆、新疆、贵州、西藏<br>四川、天津、发电集团</td>
+                                <td>渠道共享，扩大国内外市场覆盖</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tag tag-purple">项目经验</span></td>
+                                <td>25座跨江大桥<br>5座詹天佑奖</td>
+                                <td>万达分布式光伏EPC<br>大学城熙街光储充设计<br>重通机床光储一体化设计<br>国网南网220kV及以下电力工程</td>
+                                <td>经验互鉴，提升交付品质</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 核心数据 -->
+            <div class="section">
+                <h2 class="section-title">合作核心数据</h2>
+                
+                <div class="data-showcase">
+                    <div class="data-item">
+                        <div class="number">5</div>
+                        <div class="label">大合作领域</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="number">12-18%</div>
+                        <div class="label">虚拟电厂IRR</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="number">±100m</div>
+                        <div class="label">电缆故障定位精度</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="number">60-80%</div>
+                        <div class="label">用电成本降低</div>
+                    </div>
+                </div>
+            </div>
+             <!-- 五大合作领域 -->
+            <div class="section">
+                <h2 class="section-title">五大深化合作领域</h2>
+                
+                <div class="info-cards">
+
+
+                    <div class="info-card">
+                        <h4>🏭 零碳园区与数智化</h4>
+                        <ul>
+                            <li>零碳园区全周期建设</li>
+                            <li>源网荷储一体化系统</li>
+                            <li>AI+数智化平台</li>
+                            <li>AI+碳资产管理</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>🌍 海外输变电与新能源</h4>
+                        <ul>
+                            <li>东南亚/一带一路/北美市场</li>
+                            <li>220kV及以下电力工程</li>
+                            <li>光伏/风电/储能 新能源项目</li>
+                            <li>国外电力系统规划</li>
+                         </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h4>⚡ 虚拟电厂与绿电直连</h4>
+                        <ul>
+                            <li>VPP资源聚合与电力交易</li>
+                            <li>绿电专线供电方案</li>
+                            <li>接入系统规划</li>
+                            <li>经济效益IRR 12-18%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>🔍 电缆故障监测定位</h4>
+                        <ul>
+                            <li>数据+机理双驱动配电网故障识别</li>
+                            <li>故障选线</li>
+                            <li>故障原因的有效辨别</li>
+                            <li>定位精度±100米</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>🔋 移动储能仓与EMS</h4>
+                        <ul>
+                            <li>500kWh-2MWh移动储能</li>
+                            <li>应急保电与施工供电</li>
+                            <li>EMS能源管理系统</li>
+                            <li>云边协同智能优化</li>
+                        </ul>
+                    </div>
+                     
+
+                </div>
+            </div>
+            
+
+
+             
+            <!-- 零碳园区架构 -->
+            <div class="section">
+                <h2 class="section-title">🏭 零碳园区能源架构</h2>
+                
+                <div class="architecture-diagram">
+                    <div class="diagram-title">🏭 零碳园区能源系统架构</div>
+                    
+                    <div class="layer-label">🔋 能源输入层</div>
+                    <div class="diagram-layer">
+                        <div class="diagram-box box-solar">
+                            <h4>☀️ 光伏发电</h4>
+                            <p>屋顶/车棚/BIPV</p>
+                        </div>
+                        <div class="diagram-box box-wind">
+                            <h4>💨 风力发电</h4>
+                            <p>小型风机</p>
+                        </div>
+                        <div class="diagram-box box-storage">
+                            <h4>🔋 储能系统</h4>
+                            <p>锂电池</p>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow-down">⬇</div>
+                    
+                    <div class="layer-label">⚡ 能源转换层</div>
+                    <div class="diagram-layer">
+                        <div class="diagram-box box-microgrid">
+                            <h4>🔌 微电网系统</h4>
+                            <p>并/离网切换 | 功率平衡 | 电能质量控制</p>
+                            <span style="position: absolute; top: -10px; right: -10px; background: #e74c3c; color: white; padding: 5px 12px; border-radius: 15px; font-size: 11px;">重庆华网负责</span>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow-down">⬇</div>
+                    
+                    <div class="layer-label">🏢 能源消费层</div>
+                    <div class="diagram-layer">
+                        <div class="diagram-box box-building">
+                            <h4>🏠 建筑用电</h4>
+                            <p>空调/照明/设备</p>
+                        </div>
+                        <div class="diagram-box box-charging">
+                            <h4>🚗 充电桩</h4>
+                            <p>小车/大巴</p>
+                        </div>
+                        <div class="diagram-box box-battery">
+                            <h4>🚛 换电站</h4>
+                            <p>重卡</p>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow-down">⬇</div>
+                    
+                    <div class="layer-label">🖥️ 智慧管理层</div>
+                    <div class="diagram-layer">
+                        <div class="diagram-box box-ems">
+                            <h4>📊 智慧能源管理平台(EMS)</h4>
+                            <p>发电预测 | 负荷预测 | 优化调度 | 碳排监测 | 能耗分析 | 故障预警</p>
+                            <span style="position: absolute; top: -10px; right: 10px; background: #f39c12; color: white; padding: 5px 12px; border-radius: 15px; font-size: 11px;">联合开发</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 零碳园区国内案例 -->
+                <div style="margin-top: 40px;">
+                    <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">📋 国内典型案例</h3>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>项目名称</th>
+                                    <th>地点/规模</th>
+                                    <th>技术方案</th>
+                                    <th>实施效果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>雄安市民服务中心</strong></td>
+                                    <td>河北雄安新区</td>
+                                    <td>• 分布式光伏1.2MW<br>• 地源热泵系统<br>• 智慧能源管理平台<br>• 储能系统500kWh</td>
+                                    <td>• 年减碳约1200吨<br>• 可再生能源利用率超90%<br>• 获评国家绿色建筑三星级</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>苏州同里综合能源服务中心</strong></td>
+                                    <td>江苏苏州</td>
+                                    <td>• 光伏+储能+充电桩<br>• 多能互补微电网<br>• 虚拟电厂聚合平台<br>• 直流配电网示范</td>
+                                    <td>• 清洁能源占比100%<br>• 能源利用效率提升15%<br>• 入选国家能源局示范项目</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>北京大兴国际机场</strong></td>
+                                    <td>北京<br>全球最大单体航站楼</td>
+                                    <td>• 光伏屋顶10MW<br>• 地源热泵系统<br>• 烟气余热回收<br>• 智能照明控制</td>
+                                    <td>• 可再生能源占比超10%<br>• 年节电约1200万度<br>• 获评LEED铂金级认证</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>深圳国际低碳城</strong></td>
+                                    <td>广东深圳<br>规划面积53平方公里</td>
+                                    <td>• 分布式光伏全覆盖<br>• 区域供冷系统<br>• 智能微电网群<br>• 近零能耗建筑</td>
+                                    <td>• 碳排放强度下降60%<br>• 绿色建筑比例100%<br>• 国家低碳城试点</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>宁德时代宜宾零碳工厂</strong></td>
+                                    <td>四川宜宾<br>全球最大动力电池基地</td>
+                                    <td>• 光伏+水电100%绿电<br>• 储能系统10MWh<br>• 余热回收利用<br>• 全流程碳管理</td>
+                                    <td>• 全球首家电池零碳工厂<br>• 年减碳40万吨<br>• 获PAS2060碳中和认证</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 12px;">
+                        <h4 style="color: #2e7d32; margin-bottom: 10px;">💡 合作机会</h4>
+                        <p style="color: #555; line-height: 1.8;">
+                            林同棪国际在园区规划、建筑设计、基础设施建设方面具有甲级资质优势；重庆华网在微电网设计、储能系统集成、EMS平台开发方面具有专业经验。<strong>双方可联合承接零碳园区EPC总包项目</strong>，提供从规划设计到建设运营的全生命周期服务。
+                        </p>
+                    </div>
+                </div>
+            </div>                
+
+            <!-- 源网荷储一体化 -->
+            <div class="section">
+                <h2 class="section-title">🏭 源网荷储一体化系统</h2>
+                
+                <div class="source-grid-load">
+                    <div class="sgl-row">
+                        <div class="sgl-box">
+                            <h4>☀️ 源</h4>
+                            <ul>
+                                <li>光伏发电</li>
+                                <li>风力发电</li>
+                                <li>燃气发电</li>
+                            </ul>
+                        </div>
+                        <div class="sgl-connector">⇄</div>
+                        <div class="sgl-box">
+                            <h4>🔌 网</h4>
+                            <ul>
+                                <li>微电网</li>
+                                <li>配电网</li>
+                                <li>输电线路</li>
+                            </ul>
+                        </div>
+                        <div class="sgl-connector">⇄</div>
+                        <div class="sgl-box">
+                            <h4>🏢 荷</h4>
+                            <ul>
+                                <li>建筑用电</li>
+                                <li>充电桩</li>
+                                <li>空调设备</li>
+                            </ul>
+                        </div>
+                        <div class="sgl-connector">⇄</div>
+                        <div class="sgl-box">
+                            <h4>🔋 储</h4>
+                            <ul>
+                                <li>锂电池</li>
+                                <li>液流电池</li>
+                                <li>飞轮储能</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; font-size: 30px; color: #667eea; margin: 10px 0;">⬇ ⬇ ⬇</div>
+                    
+                    <div class="control-center">
+                        <h4>🎛️ 协同控制中心</h4>
+                        <p>功率平衡 | 能量优化 | 经济运行 | 安全保护</p>
+                    </div>
+                    
+                    <div style="text-align: center; font-size: 30px; color: #667eea; margin: 10px 0;">⬇ ⬇ ⬇</div>
+                    
+                    <div class="control-center" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <h4>☁️ EMS能源管理平台</h4>
+                        <p>实时监测 | 预测分析 | 智能调度 | 优化运行</p>
+                    </div>
+                </div>
+                
+                <!-- 源网荷储国内案例 -->
+                <div style="margin-top: 40px;">
+                    <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">📋 国内典型案例</h3>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>项目名称</th>
+                                    <th>地点/规模</th>
+                                    <th>源网荷储配置</th>
+                                    <th>实施效果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>张家口国家可再生能源示范区</strong></td>
+                                    <td>河北张家口<br>世界级示范区</td>
+                                    <td>• 风电1500万千瓦<br>• 光伏800万千瓦<br>• 储能200万千瓦<br>• 柔性直流电网</td>
+                                    <td>• 绿电直供北京冬奥<br>• 年发绿电超400亿度<br>• 可再生能源占比超70%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>青海海南州千万千瓦级新能源基地</strong></td>
+                                    <td>青海海南州<br>全球最大新能源基地</td>
+                                    <td>• 光伏1600万千瓦<br>• 风电400万千瓦<br>• 光热发电100万千瓦<br>• 特高压送出通道</td>
+                                    <td>• 年发绿电超400亿度<br>• 外送电量占比超60%<br>• 支撑"青豫直流"工程</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>江苏如东海上风电+储能项目</strong></td>
+                                    <td>江苏南通<br>亚洲最大海上风电场</td>
+                                    <td>• 海上风电800MW<br>• 配套储能200MWh<br>• 柔性直流并网<br>• 智能运维平台</td>
+                                    <td>• 年发电量超24亿度<br>• 储能平抑波动提升15%<br>• 节约标煤75万吨/年</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>浙江湖州菱湖源网荷储示范项目</strong></td>
+                                    <td>浙江湖州<br>县域级示范项目</td>
+                                    <td>• 分布式光伏50MW<br>• 储能系统10MWh<br>• 可调节负荷20MW<br>• 虚拟电厂聚合</td>
+                                    <td>• 新能源就地消纳率95%<br>• 电网峰谷差降低20%<br>• 用户用电成本降15%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>广东珠海横琴综合智慧能源项目</strong></td>
+                                    <td>广东珠海<br>国家级新区</td>
+                                    <td>• 天然气三联供<br>• 分布式光伏20MW<br>• 冰蓄冷系统<br>• 区域智能微网</td>
+                                    <td>• 综合能效超80%<br>• 年减碳5万吨<br>• 供能面积超1000万㎡</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 12px;">
+                        <h4 style="color: #1565c0; margin-bottom: 10px;">💡 技术优势</h4>
+                        <p style="color: #555; line-height: 1.8;">
+                            重庆华网具备<strong>电力设计乙级资质</strong>，已完成万达分布式光伏EPC、大学城熙街光储充设计、重通机床光储一体化设计等项目；林同棪国际具备<strong>工程设计甲级资质</strong>，在大型基础设施项目管理和工程咨询方面经验丰富。<strong>双方联合可承接大型源网荷储一体化项目</strong>，提供从规划、设计到EPC总包的全链条服务。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- AI+碳资产管理 -->
+            <div class="section">
+                <h2 class="section-title">📊碳资产管理平台</h2>
+                <div style="text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); border-radius: 15px;">
+                    <img src="碳资产管理.png" 
+                         alt="碳资产管理平台" 
+                         style="max-width: 100%; height: auto; max-height: 600px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <p style="margin-top: 20px; color: #666; font-size: 16px; font-weight: 600;">碳资产管理平台界面示意图</p>
+                </div>
+            </div>
+
+            <!-- 海外市场分析 -->
+            <div class="section">
+                <h2 class="section-title">海外市场机遇分析</h2>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>区域</th>
+                                <th>市场特点</th>
+                                <th>机会领域</th>
+                                <th>优先级</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>北美</strong></td>
+                                <td>电力设施老旧，急需大规模升级改造</td>
+                                <td>电力设备制造、智能电网EPC建设</td>
+                                <td><span class="tag tag-green">高</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>东南亚</strong></td>
+                                <td>电力需求快速增长，电网薄弱</td>
+                                <td>输变电、分布式光伏、微电网</td>
+                                <td><span class="tag tag-green">高</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>中亚</strong></td>
+                                <td>新能源资源丰富，送出需求大</td>
+                                <td>风电、光伏、特高压送出</td>
+                                <td><span class="tag tag-green">高</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>中东</strong></td>
+                                <td>能源转型，大型新能源项目</td>
+                                <td>光伏、储能、绿氢</td>
+                                <td><span class="tag tag-blue">中</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>非洲</strong></td>
+                                <td>电力缺口大，离网需求</td>
+                                <td>微电网、分布式能源</td>
+                                <td><span class="tag tag-orange">中</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>拉美</strong></td>
+                                <td>水电为主，新能源补充</td>
+                                <td>光伏、风电、储能</td>
+                                <td><span class="tag tag-purple">低</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- 海外市场详细案例 -->
+                <div style="margin-top: 40px;">
+                    <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">🌍 重点市场详细分析</h3>
+                    
+                    <!-- 北美市场 -->
+                    <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); border-radius: 15px;">
+                        <h4 style="color: #667eea; font-size: 20px; margin-bottom: 15px;">🇺🇸 北美市场 - 电网升级巨大机遇</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">市场特点</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li>电网基础设施评分C-，70%变压器超期服役</li>
+                                    <li>2024年PJM容量电价暴涨833%</li>
+                                    <li>储能市场2025年新增57.6GWh</li>
+                                    <li>政府投资19亿美元升级电网</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">典型案例</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li><strong>加州CAISO储能项目</strong>：2024年储能峰值7.5GW</li>
+                                    <li><strong>德州ERCOT储能</strong>：2024年夏季为用户节省7亿美元</li>
+                                    <li><strong>纽约电网升级</strong>：22亿美元联邦拨款</li>
+                                    <li><strong>加拿大绿氢走廊</strong>：美加联合投资</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 10px;">
+                            <strong>合作机会：</strong>林同棪国际北美机构（TYLin International）可提供本地化支持，联合承接电网升级EPC项目、储能系统集成。
+                        </div>
+                    </div>
+                    
+                    <!-- 东南亚市场 -->
+                    <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 15px;">
+                        <h4 style="color: #2e7d32; font-size: 20px; margin-bottom: 15px;">🌏 东南亚市场 - 电力需求爆发式增长</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">市场特点</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li>年均电力需求增长6-8%</li>
+                                    <li>1.2亿人无电可用</li>
+                                    <li>电网基础设施薄弱</li>
+                                    <li>光伏资源丰富（光照2000+小时）</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">典型案例</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li><strong>越南光伏</strong>：2023年装机超18GW，全球前十</li>
+                                    <li><strong>泰国微电网</strong>：离岛微电网示范项目</li>
+                                    <li><strong>印尼光伏+储能</strong>：1.5GW规划项目</li>
+                                    <li><strong>菲律宾风电</strong>：海上风电开发计划</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 10px;">
+                            <strong>合作机会：</strong>通过林同棪国际东南亚网络，联合开发分布式光伏、微电网、输变电项目。
+                        </div>
+                    </div>
+                    
+                    <!-- 中亚市场 -->
+                    <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-radius: 15px;">
+                        <h4 style="color: #f57c00; font-size: 20px; margin-bottom: 15px;">🏔️ 中亚市场 - 一带一路核心节点</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">市场特点</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li>风光资源极其丰富（风电潜力超1TW）</li>
+                                    <li>电力外送需求迫切（中国、欧洲）</li>
+                                    <li>中亚-中国特高压通道建设</li>
+                                    <li>政府大力支持新能源</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">典型案例</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li><strong>哈萨克斯坦风电</strong>：1GW风电基地</li>
+                                    <li><strong>乌兹别克斯坦光伏</strong>：1.5GW光伏+储能</li>
+                                    <li><strong>吉尔吉斯水电</strong>：升级改造项目</li>
+                                    <li><strong>土库曼斯坦燃气</strong>：联合循环电站</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 10px;">
+                            <strong>合作机会：</strong>依托林同棪国际工程咨询能力，联合参与中亚新能源基地规划、特高压送出工程设计。
+                        </div>
+                    </div>
+                    
+                    <!-- 中东市场 -->
+                    <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); border-radius: 15px;">
+                        <h4 style="color: #c2185b; font-size: 20px; margin-bottom: 15px;">🕌 中东市场 - 能源转型加速</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">市场特点</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li>"2030愿景"能源转型战略</li>
+                                    <li>光伏成本全球最低（<1美分/kWh）</li>
+                                    <li>绿氢产业快速发展</li>
+                                    <li>主权财富基金大规模投资</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">典型案例</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li><strong>沙特NEOM新城</strong>：100%可再生能源供电</li>
+                                    <li><strong>阿联酋Al Dhafra</strong>：2GW全球最大单体光伏</li>
+                                    <li><strong>卡塔尔世界杯</strong>：800MW光伏供电</li>
+                                    <li><strong>阿曼绿氢项目</strong>：25GW风光制氢</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 10px;">
+                            <strong>合作机会：</strong>参与沙特、阿联酋大型光伏+储能EPC项目，提供工程设计和系统集成服务。
+                        </div>
+                    </div>
+                    
+                    <!-- 非洲市场 -->
+                    <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border-radius: 15px;">
+                        <h4 style="color: #0277bd; font-size: 20px; margin-bottom: 15px;">🦁 非洲市场 - 离网供电刚需</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">市场特点</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li>6亿人无电可用</li>
+                                    <li>分布式能源需求迫切</li>
+                                    <li>光伏资源极佳</li>
+                                    <li>国际援助资金充足</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 style="color: #333; margin-bottom: 10px;">典型案例</h5>
+                                <ul style="color: #555; line-height: 1.8; padding-left: 20px;">
+                                    <li><strong>肯尼亚离网光伏</strong>："即付即用"模式</li>
+                                    <li><strong>尼日利亚微电网</strong>：农村电气化项目</li>
+                                    <li><strong>摩洛哥光伏</strong>：Noor太阳能综合体</li>
+                                    <li><strong>南非储能</strong>：Eskom电网侧储能</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 10px;">
+                            <strong>合作机会：</strong>开发离网微电网、分布式光伏项目，参与世界银行、亚投行资助项目。
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 海外合作策略 -->
+                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 15px;">
+                    <h4 style="font-size: 20px; margin-bottom: 15px;">🤝 海外合作策略</h4>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                        <div style="padding: 15px; background: rgba(255,255,255,0.15); border-radius: 10px;">
+                            <h5 style="margin-bottom: 10px;">渠道共享</h5>
+                            <p style="font-size: 14px; opacity: 0.9;">利用林同棪国际海外机构（新加坡、北美）和Sidara集团全球网络获取项目信息</p>
+                        </div>
+                        <div style="padding: 15px; background: rgba(255,255,255,0.15); border-radius: 10px;">
+                            <h5 style="margin-bottom: 10px;">资质互补</h5>
+                            <p style="font-size: 14px; opacity: 0.9;">林同棪国际工程设计甲级资质 + 重庆华网新能源专业经验，联合投标</p>
+                        </div>
+                        <div style="padding: 15px; background: rgba(255,255,255,0.15); border-radius: 10px;">
+                            <h5 style="margin-bottom: 10px;">本地化服务</h5>
+                            <p style="font-size: 14px; opacity: 0.9;">依托林同棪国际当地团队提供属地化服务，降低项目风险</p>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- 电力工程展示 -->
+                    <div style="margin-top: 40px;">
+                        <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">📚 重庆华网电力工程案例</h3>
+                        
+                        <div style="text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); border-radius: 15px;">
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto;">
+                                <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                    <img src="aks.png" alt="阿克苏邦德220kV变电站" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                                </div>
+                                <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                    <img src="linzhi.png" alt="林芝觉木110kV变电站" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                                </div>
+                                <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                    <img src="nanchuan.jpg" alt="南川山水村110kV线路" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                                </div>
+                                <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                    <img src="bdl.jpg" alt="阿克苏35kV线路" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                                </div>
+                            </div>
+                            <p style="margin-top: 20px; color: #666; font-size: 16px; font-weight: 600;">电力工程案例</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 12px;">
+                            <h4 style="color: #2e7d32; margin-bottom: 10px;">💡 技术优势</h4>
+                            <p style="color: #555; line-height: 1.8;">
+                                公司具有丰富的220KV 及以下输变配电设计经验，按照“标准化设计、工厂化加工、模块化建设、机械化施工” 技术原则，响应“调控一体、运维一体”、“三通一标”及“四统一”要求，将先进理念与工程应用实施紧密结合，采用数字化、三维平台先进设计手段，
+                                实现设计成果可视化，构建具备“数字三维设计、系统功能整合、布局紧凑合理、模块方案深化、施工节能高效”为特征的新一代模块化设计方案；采用先进的PSASP/ETAP、ATP/EMTP等计算软件，为工程设计提供技术保障。重庆华网的优质服务和专业技术已取得了包括国家电网、南方电网、五大发电集团等广大客户的普遍认可。
+
+                            </p>
+                        </div>
+                    </div>
+            </div>
+
+
+            <!-- 虚拟电厂架构图 -->
+            <div class="section">
+                <h2 class="section-title">⚡ 虚拟电厂(VPP)架构图</h2>
+                
+                <div class="vpp-architecture">
+                    <div class="vpp-layer resource-layer">
+                        <div class="vpp-layer-title">📦 资源层 - 分布式资源聚合</div>
+                        <div class="vpp-resources">
+                            <div class="vpp-box" style="background: #fff3e0;">
+                                <h4>☀️ 分布式光伏</h4>
+                                <p>屋顶/车棚/BIPV</p>
+                            </div>
+                            <div class="vpp-box" style="background: #e3f2fd;">
+                                <h4>🔋 储能系统</h4>
+                                <p>锂电/液流电池</p>
+                            </div>
+                            <div class="vpp-box" style="background: #e8f5e9;">
+                                <h4>🚗 充电桩</h4>
+                                <p>可控充电负荷</p>
+                            </div>
+                            <div class="vpp-box" style="background: #f3e5f5;">
+                                <h4>🏢 可控负荷</h4>
+                                <p>空调/照明/设备</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow-connector">⬇</div>
+                    
+                    <div class="vpp-layer aggregation-layer">
+                        <div class="vpp-layer-title">🔌 聚合层 - 边缘计算与通信</div>
+                        <div class="vpp-resources">
+                            <div class="vpp-box">
+                                <h4>边缘计算网关</h4>
+                                <p>数据采集/预处理</p>
+                            </div>
+                            <div class="vpp-box">
+                                <h4>通信网络</h4>
+                                <p>4G/5G/光纤</p>
+                            </div>
+                            <div class="vpp-box">
+                                <h4>数据汇聚</h4>
+                                <p>实时数据上传</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow-connector">⬇</div>
+                    
+                    <div class="vpp-layer platform-layer">
+                        <div class="vpp-layer-title">☁️ 平台层 - VPP云平台</div>
+                        <div class="vpp-resources">
+                            <div class="vpp-box">
+                                <h4>🔮 预测算法</h4>
+                                <p>发电/负荷预测</p>
+                            </div>
+                            <div class="vpp-box">
+                                <h4>⚖️ 优化调度</h4>
+                                <p>多目标优化</p>
+                            </div>
+                            <div class="vpp-box">
+                                <h4>📊 资源管理</h4>
+                                <p>聚合/分解控制</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow-connector">⬇</div>
+                    
+                    <div class="vpp-layer market-layer">
+                        <div class="vpp-layer-title">💰 市场层 - 电力市场交易</div>
+                        <div class="vpp-resources">
+                            <div class="vpp-box">
+                                <h4>📈 现货市场</h4>
+                                <p>峰谷价差套利</p>
+                            </div>
+                            <div class="vpp-box">
+                                <h4>🔄 辅助服务</h4>
+                                <p>调频/备用容量</p>
+                            </div>
+                            <div class="vpp-box">
+                                <h4>⚡ 需求响应</h4>
+                                <p>削峰填谷收益</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #e8f5e9; border-radius: 10px; text-align: center;">
+                    <strong>经济效益：</strong>需求响应 | 辅助服务收益 | 现货套利 | 预计IRR <span style="color: #27ae60; font-size: 20px;">12-18%</span>
+                </div>
+                
+                <!-- 虚拟电厂国内案例 -->
+                <div style="margin-top: 40px;">
+                    <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">📋 国内典型案例</h3>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>项目名称</th>
+                                    <th>地点/规模</th>
+                                    <th>聚合资源</th>
+                                    <th>实施效果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>深圳虚拟电厂管理中心</strong></td>
+                                    <td>广东深圳<br>全国首个VPP管理中心</td>
+                                    <td>• 分布式光伏1.2GW<br>• 储能系统500MWh<br>• 可控负荷2.5GW<br>• 充电桩15万个</td>
+                                    <td>• 调节能力超100万千瓦<br>• 年收益超3亿元<br>• 支撑电网削峰填谷</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>上海电力需求响应示范项目</strong></td>
+                                    <td>上海<br>城市级示范项目</td>
+                                    <td>• 工商业用户3000+<br>• 可调节负荷1.5GW<br>• 储能系统200MWh<br>• 智能楼宇群控</td>
+                                    <td>• 单次响应能力超100万kW<br>• 响应时间<15分钟<br>• 用户补贴收益可观</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>山西现货市场虚拟电厂</strong></td>
+                                    <td>山西<br>全国首个电力现货市场</td>
+                                    <td>• 新能源场站50+<br>• 储能项目30个<br>• 可控负荷500MW<br>• 聚合容量2GW</td>
+                                    <td>• 现货套利收益显著<br>• 辅助服务市场收益<br>• 新能源消纳提升15%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>江苏电网侧储能聚合平台</strong></td>
+                                    <td>江苏<br>省级储能聚合</td>
+                                    <td>• 电网侧储能1.5GW/3GWh<br>• 用户侧储能500MWh<br>• 新能源配储800MWh<br>• 统一调度平台</td>
+                                    <td>• 调频里程收益行业领先<br>• 调峰能力超200万kW<br>• 年收益超5亿元</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>冀北新能源虚拟电厂</strong></td>
+                                    <td>河北张家口<br>新能源高占比地区</td>
+                                    <td>• 风电场20座<br>• 光伏电站30座<br>• 储能系统300MWh<br>• 可调节负荷200MW</td>
+                                    <td>• 新能源出力预测精度>90%<br>• 弃风弃光率<5%<br>• 辅助服务收益超1亿元</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                        <div style="padding: 20px; background: #e3f2fd; border-radius: 10px; text-align: center;">
+                            <div style="font-size: 28px; font-weight: bold; color: #1976d2;">30+</div>
+                            <div style="font-size: 14px; color: #666; margin-top: 5px;">VPP试点省市</div>
+                        </div>
+                        <div style="padding: 20px; background: #fff3e0; border-radius: 10px; text-align: center;">
+                            <div style="font-size: 28px; font-weight: bold; color: #f57c00;">10GW+</div>
+                            <div style="font-size: 14px; color: #666; margin-top: 5px;">已聚合资源规模</div>
+                        </div>
+                        <div style="padding: 20px; background: #e8f5e9; border-radius: 10px; text-align: center;">
+                            <div style="font-size: 28px; font-weight: bold; color: #388e3c;">50亿+</div>
+                            <div style="font-size: 14px; color: #666; margin-top: 5px;">市场规模(元/年)</div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-radius: 12px;">
+                        <h4 style="color: #7b1fa2; margin-bottom: 10px;">💡 合作优势</h4>
+                        <p style="color: #555; line-height: 1.8;">
+                            重庆华网具备<strong>电力需求侧管理、分布式能源接入、储能系统集成</strong>的专业能力，已完成大学城熙街光储充设计等项目；林同棪国际在<strong>智慧园区、建筑能源管理</strong>方面经验丰富。<strong>双方联合可提供VPP全链条服务</strong>：从资源聚合、平台开发到运营优化，帮助客户参与电力市场交易，获取需求响应、辅助服务、现货套利等多重收益。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 新能源工程展示 -->
+                <div style="margin-top: 40px;">
+                    <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">📚 重庆华网新能源工程案例</h3>
+                    
+                    <div style="text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); border-radius: 15px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto;">
+                            <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                <img src="wzxt.png" alt="万州新田" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
+                            <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                <img src="wzjk.jpg" alt="万州经开区" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
+                            <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                <img src="dxcxj.png" alt="大学城熙街" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
+                            <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                <img src="wanda.jpg" alt="万达分布式光伏" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px; color: #666; font-size: 16px; font-weight: 600;">新能源工程案例</p>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            
+            <!-- 电缆故障监测系统 -->
+            <div class="section">
+                <h2 class="section-title">🔍 电缆故障监测及定位系统</h2>
+                
+                <div class="cable-flow">
+                    <div class="cable-step">感知<br>监测</div>
+                    <div class="cable-arrow">→</div>
+                    <div class="cable-step">传输<br>通信</div>
+                    <div class="cable-arrow">→</div>
+                    <div class="cable-step">平台<br>分析</div>
+                    <div class="cable-arrow">→</div>
+                    <div class="cable-step">应用<br>展示</div>
+                </div>
+                
+                <div class="cable-system">
+                    <div class="cable-module">
+                        <h4>感知层</h4>
+                        <ul>
+                            <li>工作电压测量</li>
+                            <li>零序电压测量</li>
+                            <li>零序电流测量</li>
+                            <li>工作电流测量</li>
+
+                        </ul>
+                    </div>
+                    <div class="cable-module">
+                        <h4>传输层</h4>
+                        <ul>
+                            <li>工业以太网</li>
+                            <li>光纤通信网络</li>
+                            <li>无线传输</li>
+                            <li>数据加密传输</li>
+                        </ul>
+                    </div>
+                    <div class="cable-module">
+                        <h4>平台层</h4>
+                        <ul>
+                            <li>故障预警分析</li>
+                            <li>故障定位</li>
+                            <li>AI故障诊断</li>
+                            <li>绝缘老化评估</li>
+                        </ul>
+                    </div>
+                    <div class="cable-module">
+                        <h4>应用层</h4>
+                        <ul>
+                            <li>监控大屏</li>
+                            <li>移动端APP</li>
+                            <li>GIS集成</li>
+                            <li>工单自动派发</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                    <div style="background: #e3f2fd; padding: 15px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #1976d2;">±100m</div>
+                        <div style="font-size: 12px; color: #666;">故障定位精度</div>
+                    </div>
+                    <div style="background: #fff3e0; padding: 15px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #f57c00;">24/7</div>
+                        <div style="font-size: 12px; color: #666;">全天候监测</div>
+                    </div>
+                    <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #388e3c;">&lt;1s</div>
+                        <div style="font-size: 12px; color: #666;">故障响应时间</div>
+                    </div>
+                    <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #7b1fa2;">AI</div>
+                        <div style="font-size: 12px; color: #666;">智能诊断算法</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">📚 系统架构</h3>
+                    
+                        <div style="text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); border-radius: 15px;">
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 1000px; margin: 0 auto;">
+                            <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                <img src="电缆故障1.png" alt="万州新田" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
+                            <div style="aspect-ratio: 5/3; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #fff;">
+                                <img src="电缆故障2.png" alt="万州经开区" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                            </div>
+
+
+                        </div>
+                        <p style="margin-top: 20px; color: #666; font-size: 16px; font-weight: 600;">电缆监测定位图</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- 移动储能仓 -->
+            <div class="section">
+                <h2 class="section-title">🔋 移动储能仓系统</h2>
+                
+                <div class="energy-storage">
+                    <div class="storage-specs">
+                        <h4>📋 技术参数</h4>
+                        <div class="spec-item">
+                            <span>储能容量</span>
+                            <span>500kWh - 2MWh</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>输出功率</span>
+                            <span>250kW - 1MW</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>电压等级</span>
+                            <span>380V / 10kV</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>部署时间</span>
+                            <span>&lt; 4小时</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>运输方式</span>
+                            <span>标准集装箱</span>
+                        </div>
+                        <div class="spec-item">
+                            <span>防护等级</span>
+                            <span>IP54 / IP65</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 style="margin-bottom: 15px; color: #333;">🎯 应用场景</h4>
+                        <div class="storage-scenarios">
+                            <div class="scenario-card">
+                                <h5>⚡ 应急保电</h5>
+                                <p>重大活动、抢险救灾临时供电保障</p>
+                            </div>
+                            <div class="scenario-card">
+                                <h5>🔧 施工供电</h5>
+                                <p>偏远地区工程施工临时电源</p>
+                            </div>
+                            <div class="scenario-card">
+                                <h5>📈 季节性增容</h5>
+                                <p>夏季/冬季用电高峰临时扩容</p>
+                            </div>
+                            <div class="scenario-card">
+                                <h5>🔌 充电站配套</h5>
+                                <p>临时增加充电桩供电能力</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 专利证书展示 -->
+                <div style="margin-top: 40px;">
+                    <h3 style="font-size: 22px; color: #333; margin-bottom: 20px; padding-left: 15px; border-left: 4px solid #667eea;">📜 核心技术专利</h3>
+                    
+                    <div style="text-align: center; margin: 30px 0; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); border-radius: 15px;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: flex-start;">
+                            <img src="发明专利.png"
+                                 alt="极早期预警专利授权证书（一）"
+                                 style="flex: 1 1 260px; max-width: min(100%, 480px); width: 100%; height: auto; max-height: 600px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                            <img src="发明专利2.png"
+                                 alt="极早期预警专利授权证书（二）"
+                                 style="flex: 1 1 260px; max-width: min(100%, 480px); width: 100%; height: auto; max-height: 600px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        </div>
+                        <p style="margin-top: 20px; color: #666; font-size: 16px; font-weight: 600;">极早期预警系统专利授权证书</p>
+                        <p style="margin-top: 10px; color: #888; font-size: 14px;">专利技术为移动储能仓系统提供安全保障</p>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 12px;">
+                        <h4 style="color: #2e7d32; margin-bottom: 10px;">💡 技术优势</h4>
+                        <p style="color: #555; line-height: 1.8;">
+                            依托<strong>极早期预警专利技术</strong>，移动储能仓系统可实现电池热失控的早期预警，提前发现安全隐患，
+                            大幅提升储能系统安全性。结合BMS电池管理系统和消防联动控制，形成<strong>"监测-预警-处置"</strong>全链条安全保障体系。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+                
+
+            
+
+            
+
+            
+           
+            <!-- 合作流程 -->
+            <div class="section">
+                <h2 class="section-title">合作推进流程</h2>
+                
+                <div class="flow-chart">
+                    <div class="flow-step">
+                        <div class="flow-number">1</div>
+                        <div class="flow-content">
+                            <h4>短期目标（1年内）</h4>
+                            <p>建立战略合作关系，签署框架协议</p>
+                            <p>联合投标1-2个综合能源+零碳园区示范项目</p>
+                            <p>完成至少1个示范性合作项目</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step">
+                        <div class="flow-number">2</div>
+                        <div class="flow-content">
+                            <h4>中期目标（1-3年）</h4>
+                            <p>形成零碳园区联合解决方案</p>
+                            <p>在重点区域建立常态化合作机制</p>
+                            <p>联合申报科研课题或行业标准</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-step">
+                        <div class="flow-number">3</div>
+                        <div class="flow-content">
+                            <h4>长期目标（3-5年）</h4>
+                            <p>打造行业领先的综合能源基础设施设计品牌</p>
+                            <p>共同开拓海外市场（东南亚、一带一路、北美等）</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+
+        
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>林同棪国际工程咨询（中国）有限公司 · 重庆华网电力设计有限公司</p>
+            <p style="margin-top: 10px;">携手共创 · 绿色未来 · 智领能源</p>
+        </div>
+    </div>
+</body>
+</html>
